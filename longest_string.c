@@ -2,24 +2,24 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc,char *argv[])
+int main(int argc, char *argv[])
 {
-    int INDEX;
-    if(argc<=1)
+    int index;
+    if(argc <= 1)
     {
-        puts("Empty string");
+        puts("empty string");
     }
     else
     {
-       INDEX=1;
-       for(int i=2;i<argc;i++)
+       index = 1;
+       for (int i = 2; i < argc; i++)
        {
-         if(strlen(argv[INDEX])<strlen(argv[i]))
+         if(strlen(argv[index]) < strlen(argv[i]))
          {
-             INDEX=i;
+             index = i;
          }
        }
-       printf("%s\n",argv[INDEX]);
+       puts(argv[index]);
     }
     return EXIT_SUCCESS;
 }
