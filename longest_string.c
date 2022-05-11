@@ -4,22 +4,20 @@
 
 int main(int argc, char *argv[])
 {
+    char *longestString= "";
     int index;
-    if(argc <= 1)
-    {
-        puts("empty string");
-    }
-    else
+    if(argc > 1)
     {
        index = 1;
        for (int i = 2; i < argc; i++)
        {
-         if(strlen(argv[index]) < strlen(argv[i]))
+         if (strlen(argv[index]) < strlen(argv[i]))
          {
              index = i;
          }
        }
-       puts(argv[index]);
+       longestString = argv[index];
     }
+    puts(longestString);
     return EXIT_SUCCESS;
 }
