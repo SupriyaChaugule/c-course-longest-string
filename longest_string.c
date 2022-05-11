@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     char *longestString= "";
     int index;
-    if(argc > 1)
+    if (argc > 1)
     {
        index = 1;
        for (int i = 2; i < argc; i++)
